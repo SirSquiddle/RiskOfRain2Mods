@@ -85,6 +85,8 @@ namespace BetterShield
                     damageInfo.attacker.name == "VagrantBody(Clone)" ||
                     damageInfo.attacker.name == "JellyfishBody(Clone)" ||
                     damageInfo.inflictor.name == "BeamSphere(Clone)" ||
+                    damageInfo.inflictor.name == "ElectricOrbProjectile(Clone)" ||
+                    damageInfo.inflictor.name == "ElectricWormBody(Clone)" ||
                     (damageInfo.inflictor.name != "ToolbotBody(Clone)" && damageInfo.inflictor.name != "CryoCanisterBombletsProjectile(Clone)" && damageInfo.inflictor.name != "CryoCanisterProjectile(Clone)" && damageInfo.inflictor.name != "CommandoBody(Clone)" && damageInfo.damageType == DamageType.Stun1s)) ||
                     null == damageInfo.inflictor && damageInfo.damageType == DamageType.Stun1s)
                     {
@@ -100,7 +102,7 @@ namespace BetterShield
 
                     if (!electric)
                         {
-                            Debug.Log("Damage reduced by shield");
+                            //Debug.Log("Damage reduced by shield");
                             float damageleftaftershieldreduction = damageInfo.damage * damageReduction - self.shield;
 
                             if (damageleftaftershieldreduction > 0)
