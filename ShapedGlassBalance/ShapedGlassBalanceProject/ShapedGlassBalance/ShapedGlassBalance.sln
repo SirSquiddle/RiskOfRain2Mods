@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapedGlassBalance", "ShapedGlassBalance.csproj", "{3A41BAE2-D6EF-402B-BA97-4409C1E5762C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A41BAE2-D6EF-402B-BA97-4409C1E5762C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A41BAE2-D6EF-402B-BA97-4409C1E5762C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A41BAE2-D6EF-402B-BA97-4409C1E5762C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A41BAE2-D6EF-402B-BA97-4409C1E5762C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9862E646-9C65-442C-B013-99319BDF6234}
+	EndGlobalSection
+EndGlobal
