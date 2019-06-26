@@ -10,7 +10,7 @@ namespace MMTGA
 {
     [BepInDependency("com.bepis.r2api")]
 
-    [BepInPlugin("com.Squiddle.makemonstertoothgreatagain", "MakeMonsterToothGreatAgain", "1.0.1")]
+    [BepInPlugin("com.Squiddle.makemonstertoothgreatagain", "MakeMonsterToothGreatAgain", "1.0.2")]
 
     public class MMTGA : BaseUnityPlugin
     {
@@ -33,7 +33,7 @@ namespace MMTGA
             {
                 var c = new ILCursor(il);
                 c.GotoNext(
-                    x => x.MatchLdloc(29)
+                    x => x.MatchLdloc(28)
                     );
                 instr2 = c.Next.Operand;
                 c.GotoNext(
@@ -46,6 +46,7 @@ namespace MMTGA
                 c.Emit(OpCodes.Ldloc_S, instr2);
                 c.EmitDelegate<Action<GameObject, int>>((healthOrbGameObject, toothCount ) =>
                 {
+                    Debug.Log("sqdknqlfn,lks,dlk,qsdlk,qsld,qslk,dqls,lk,dlq,sldk,sqld,lq,dlkqs,dlksdl,sdk,");
                     float num6 = Mathf.Pow((float)toothCount, 0.25f);
                     healthOrbGameObject.GetComponentInChildren<HealthPickup>().flatHealing = 0f;
                     healthOrbGameObject.GetComponentInChildren<HealthPickup>().fractionalHealing = healingStack1 + healingOtherStacks * (toothCount-1);
