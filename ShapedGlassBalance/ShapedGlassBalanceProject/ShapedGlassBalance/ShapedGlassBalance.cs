@@ -16,25 +16,6 @@ namespace ShapedGlassBalance
     {
         public void Awake()
         {
-           /* object instr = null;
-            object instr2 = null;
-            object instr3 = null;
-            */
-            /*IL.RoR2.CharacterBody.CalcLunarDaggerPower += (il) =>
-            {
-                var c = new ILCursor(il);
-                c.GotoNext(
-                    x => x.MatchLdcR4(2),
-                    x => x.MatchLdarg(0)
-                    );
-                c.Index += 2;
-                instr = c.Next.Operand;
-                c.Index += 1;
-                instr2 = c.Next.Operand;
-                c.Index += 1;
-                instr3 = c.Next.Operand;
-            };*/
-
             IL.RoR2.CharacterBody.RecalculateStats += (il) =>
             {
                 var c = new ILCursor(il);
@@ -61,7 +42,7 @@ namespace ShapedGlassBalance
                         return 1f;
                     }
                 });
-                Debug.Log(il);
+                //Debug.Log(il);
             };
             
         }
