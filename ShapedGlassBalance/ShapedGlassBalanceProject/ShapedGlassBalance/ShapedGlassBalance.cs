@@ -10,7 +10,7 @@ namespace ShapedGlassBalance
 {
     [BepInDependency("com.bepis.r2api")]
 
-    [BepInPlugin("com.Squiddle.shapedglassbalance", "ShapedGlassBalance", "1.0.4")]
+    [BepInPlugin("com.Squiddle.shapedglassbalance", "ShapedGlassBalance", "1.0.6")]
 
     public class ShapedGlassBalance : BaseUnityPlugin
     {
@@ -18,11 +18,12 @@ namespace ShapedGlassBalance
         {
             IL.RoR2.CharacterBody.RecalculateStats += (il) =>
             {
+                int val1, val2;
                 var c = new ILCursor(il);
                 c.GotoNext(
-                    x => x.MatchLdloc(42),
+                    x => x.MatchLdloc(out val1),
                     x => x.MatchLdcR4(2),
-                    x => x.MatchLdloc(24), 
+                    x => x.MatchLdloc(out val2), 
                     x => x.MatchConvR4()
                     );
                 c.Index += 1;
